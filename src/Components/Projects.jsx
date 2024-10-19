@@ -82,7 +82,7 @@ const Projects = ({ bgcolor, darkmode }) => {
           </a>
 
           {/* FLAMA E-commerce Card */}
-          <a href="https://ecommerce-804jvq41n-avanishdevs-projects.vercel.app/">
+          <a href="https://ecommerce-website-alpha-nine.vercel.app/">
             <div
               className={`ui-ux-design w-80 flex flex-col gap-3 p-5 rounded-lg transition delay-150 ${
                 bgcolor === "white"
