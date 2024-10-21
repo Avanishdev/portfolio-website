@@ -213,7 +213,7 @@ const Projects = ({ bgcolor, darkmode }) => {
           </a>
 
           {/* Portfolio Website Card */}
-          <a href="https://amazing-toffee-71729d.netlify.app">
+          <a href="https://avanish-portfolio-site.netlify.app/">
             <div
               className={`ui-ux-design w-80 flex flex-col gap-3 p-5 rounded-lg transition delay-150 ${
                 bgcolor === "white"
