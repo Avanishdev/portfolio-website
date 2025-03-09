@@ -12,12 +12,14 @@ import takeuforward from "../Components/SocialLinks/takeuforward.png";
 import traveladvisor from "../Components/SocialLinks/traveladvisor.png";
 import portfolio from "../Components/SocialLinks/portfolio.png";
 import github from "../Components/SocialLinks/github(2).png";
+import { useNavigate } from "react-router-dom";
 
 const Projects = ({ bgcolor, darkmode }) => {
   const [repos, setRepos] = useState([]);
   const [filteredRepos, setFilteredRepos] = useState([]);
   const [loading, setLoading] = useState(false);
   const [dataFetched, setDataFetched] = useState(false);
+  const navigate = useNavigate();
 
   const fetchRepos = async () => {
     if (dataFetched) return;
@@ -273,14 +275,26 @@ const Projects = ({ bgcolor, darkmode }) => {
         </div>
       </div>
 
-      {/* More Projects Button */}
-      <div className="text-center my-5">
-        <button
-          onClick={fetchRepos}
-          className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-700"
-        >
-          {loading ? "Loading..." : "More Projects"}
-        </button>
+      <div className="flex justify-center">
+        {/* More Projects Button */}
+        <div className="text-center my-5">
+          <button
+            onClick={fetchRepos}
+            className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-700"
+          >
+            {loading ? "Loading..." : "More Projects"}
+          </button>
+        </div>
+
+        {/* Github Button */}
+        <div className="text-center my-5 ml-6">
+          <button
+            onClick={() => navigate("/github")}
+            className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-700"
+          >
+            {loading ? "Loading..." : "Go To GitHub"}
+          </button>
+        </div>
       </div>
       {/* </div> */}
     </>

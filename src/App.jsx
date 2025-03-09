@@ -10,6 +10,8 @@ import Projects from "./Components/Projects";
 import ForMobile from "./Components/ForMobile";
 import Certificate from "./Components/Certificate";
 import Home from "./Components/Home";
+import GitHubPage from "./Components/GitHubPage";
+import RepoDetails from "./Components/RepoDetails";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -102,6 +104,16 @@ function App() {
             <Route
               path="/Certify"
               element={<Certificate bgcolor={bgcolor} darkmode={darkmode} />}
+            />
+
+            <Route
+              path="/github"
+              element={<GitHubPage bgcolor={bgcolor} darkmode={darkmode} />}
+            />
+
+            <Route
+              path="/github/:repoName"
+              element={<RepoDetails bgcolor={bgcolor} darkmode={darkmode} />}
             />
           </Route>
         </Routes>

@@ -110,7 +110,7 @@ const Certificate = ({ bgcolor, darkmode }) => {
         </h1>
 
         <div className="w-full flex flex-wrap gap-4">
-          {skills.map((curr, i) => (
+          {skills?.map((curr, i) => (
             <div
               key={i}
               className="w-[7rem] text-center h-[7rem] rounded-full flex flex-col"
